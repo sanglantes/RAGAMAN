@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Anagram Online</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+	<h1 id="title">RAGAMAN</h1>
+
+	<div class="anagram-container">
+		<p class="anagram-text">Your anagram is</p>
+		<div id="scrambled_word" class="anagram-keys">
+			{% for letter in scrambled_word %}
+				<span class="key">{{ letter }}</span>
+			{% endfor %}
+		</div>
+		<form id="guess-form" autocomplete="off">
+			<input type="text" id="guess" name="guess">
+			<br>
+			<input type="button" id="new" name="new" value="NEW WORD">
+		</form>
+		<p id="points-text">Points: <span id="points">0</span></p>
+		<p id="feedback"></p>
+	</div>
+
+	<div class="flags">
+		<a href="/english"><img height="50px" width="90px" src="{{url_for('static', filename='english.jpg')}}"></a>
+		<a href="/french"><img height="50px" width="90px" src="{{url_for('static', filename='french.webp')}}"></a>
+		<a href="/swedish"><img height="50px" width="90px" src="{{url_for('static', filename='swedish.png')}}"></a>
+	</div>
+
+	<script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>

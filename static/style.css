@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Merriweather', serif;
+}
+
+body {
+	background-color: #FEFEFE;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.game-container {
+	text-align: center;
+	padding: 20px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	background-color: #FFF;
+}
+
+#title {
+	font-size: 5em;
+	text-align: center;
+	padding-top: 20px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#scrambled_word {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+input[type="text"] {
+	padding: 8px;
+	font-size: 16px;
+	border: 1px solid #999;
+	border-radius: 4px;
+	outline: none;
+}
+
+input[type="button"] {
+	padding: 8px 16px;
+	font-size: 16px;
+	border: none;
+	border-radius: 4px;
+	background-color: #4CAF50;
+	color: #FFF;
+	cursor: pointer;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+	background-color: #45a049;
+}
+
+#points {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#points-text {
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#feedback {
+	display: none;
+	background-color: #FFB3B3;
+	color: #FD0000;
+	border: 1px solid #CC0000;
+	border-radius: 2px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin-top: 10px;
+}
+
+.anagram-container {
+	text-align: center;
+	padding: 20px;
+}
+
+.anagram-text {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+.anagram-keys {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.key {
+	display: inline-block;
+	padding: 8px;
+	margin: 2px;
+	background-color: #EDEDED;
+	border-radius: 5px;
+	font-size: 1.5em;
+}
+
+#guess {
+	width: 200px;
+}
+
+#new {
+	width: 200px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.flags {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+}
+
+.earned-points {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+    transition: opacity 0.3s, transform 0.3s;
+}
